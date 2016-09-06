@@ -43,6 +43,7 @@ angular.module('greenfield.services', [])
 
   return eventsObject;
 }])
+//Factory for auth
 .factory('Auth', function($http){
   const AuthObject = {};
 
@@ -63,6 +64,10 @@ angular.module('greenfield.services', [])
     })
     .then(resp => resp);
   };
+  AuthObject.signout = () => {
+    //remove token
+  }
+  return AuthObject
 })
 //Factory for organizing events. Use to be in eventList.js, moved so userEvents.js could have access to the methods.
 .factory('EventOrganizer', function(){

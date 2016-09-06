@@ -1,8 +1,9 @@
 'use strict';
+const handler = require('./server_Auth/users/userController');
 const express = require('express');
 const api_handlers = require('./api_handlers/apiPackage');
 const cache = require('./api_handlers/cache');
-const { geocoder } = require('./api_handlers/utils')
+const { geocoder } = require('./api_handlers/utils');
 const app = express();
 const port = process.env.PORT || 8080;
 
@@ -43,6 +44,9 @@ app.get('/test*', function(req, res) {
     res.end();
   });
 });
+
+app.post('/signin', handler.signinUser);
+app.post('/signup', handler.signupUser);
 
 const ip = "127.0.0.1";
 const server = app.listen(app.get('port'));

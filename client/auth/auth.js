@@ -1,11 +1,12 @@
 angular.module('greenfield.auth', [])
+
 .controller('AuthController', ['$scope', function($scope) {
-  $scope.username= '';
-  $scope.password= '';
+  $scope.user = {};
   $scope.signin = function(){
-    let inputInfo = {};
-    let user = $scope.username;
-    inputInfo[user] = $scope.password;
-    console.log(inputInfo);
+    console.log($scope.user);
+  };
+  $scope.signup = function () {
+    console.log($scope.user.password)
+    console.log($scope.user);
   };
 }]);

@@ -13,7 +13,10 @@
     "facebook-events-by-location-core": "^0.1.4",
     "memory-cache": "^0.1.6",
     "node-geocoder": "^3.14.0",
-    "request": "^2.74.0"
+    "request": "^2.74.0",
+    "mongoose": "^4.6.0",
+    "request": "^2.74.0",
+    "bcrypt-nodejs": "0.0.3"
   },
   "scripts": {
     "postinstall": "bower install"
