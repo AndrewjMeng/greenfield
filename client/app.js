@@ -17,6 +17,10 @@ angular.module('greenfield', [
     templateUrl: 'client/eventList/eventList.html',
     controller: 'EventListController'
   })
+  .when('/aboutUs', {
+    templateUrl: 'client/aboutUs/aboutUs.html',
+    controller: ''
+  })
   .when('/signin', {
     templateUrl: 'client/auth/signin.html',
     controller:'AuthController'

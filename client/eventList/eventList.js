@@ -26,8 +26,8 @@ angular.module('greenfield.eventList', ['ngOrderObjectBy'])
   };
   $scope.sortDate = function(time) {
     let date = time.e_time;
-    console.log(new Date(date))
-    return new Date(date);
+    console.log(date)
+    return new Date(date).addHours(7);
   }
 
   function oneWeekMS() {
@@ -54,6 +54,10 @@ angular.module('greenfield.eventList', ['ngOrderObjectBy'])
     return categories;
   };
 
+Date.prototype.addHours= function(h){
+    this.setHours(this.getHours()+h);
+    return this;
+}
   //TODO: Try to implement this on the backend?
   function removeDuplicateAndExpiredEvents(events){
     const eventsObj = {};
